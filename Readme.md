@@ -55,7 +55,7 @@ This project follows below workflow:
   - Compare performance using metrics such as accuracy, precision, recall, F1-score, and ROC-AUC
   - Address class imbalance using appropriate techniques if necessary
 
-- [] Model Interpretation
+- [ ] Model Interpretation
 
  - Identify key features contributing to churn
  - Analyze feature importance to derive actionable business insights
