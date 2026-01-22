@@ -41,33 +41,21 @@ This multidimensional view enables the model to learn complex relationships betw
 This project follows below workflow:
 
 - [x] Exploratory Data Analysis (EDA)
-
  - Analyze churn distribution and class imbalance
-
  - Identify patterns and correlations between churn and customer attributes
-
  - Detect trends across demographics, services, and contract types
 
- - [ ] 2. Data Preprocessing and Feature Engineering
+ - [ ] Data Preprocessing and Feature Engineering
+  - Handle missing values and outliers
+  - Encode categorical variables
+  - Scale numerical features
+  - Engineer relevant features to improve model performance
+ - [ ] Predictive Modeling
+  - Train and evaluate multiple classification models
+  - Compare performance using metrics such as accuracy, precision, recall, F1-score, and ROC-AUC
+  - Address class imbalance using appropriate techniques if necessary
 
- - Handle missing values and outliers
+- [] Model Interpretation
 
- - Encode categorical variables
-
- - Scale numerical features
-
- - Engineer relevant features to improve model performance
-
-<!-- #### 3. Predictive Modeling
-
-Train and evaluate multiple classification models
-
-Compare performance using metrics such as accuracy, precision, recall, F1-score, and ROC-AUC
-
-Address class imbalance using appropriate techniques if necessary
-
-#### 4. Model Interpretation
-
-Identify key features contributing to churn
-
-Analyze feature importance to derive actionable business insights -->
+ - Identify key features contributing to churn
+ - Analyze feature importance to derive actionable business insights
