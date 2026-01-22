@@ -1,5 +1,7 @@
-What is Customer Churn?
+**Customer Churn Prediction in the Telecom Industry**
 
-Customer churn is defined as when customers or subscribers discontinue doing business with a firm or service.
+**Problem Definition**
 
-Customers in the telecom industry can choose from a variety of service providers and actively switch from one to the next. The telecommunications business has an annual churn rate of 15-25 percent in this highly competitive market.
+Customer churn refers to the event where a customer discontinues their subscription or service with a company. In the highly competitive telecommunications industry, customers can easily switch providers, leading to annual churn rates typically ranging between 15% and 25%.
+
+From a business and data science perspective, customer churn represents a binary classification problem, where the objective is to predict whether a customer is likely to churn (Yes) or remain active (No) based on historical data. Since acquiring new customers is significantly more expensive than retaining existing ones, accurate churn prediction models can help telecom companies optimize retention strategies and reduce revenue loss.
