@@ -40,7 +40,7 @@ This multidimensional view enables the model to learn complex relationships betw
 
 This project follows below workflow:
 
-#### 1. Exploratory Data Analysis (EDA)
+#### - [x] Exploratory Data Analysis (EDA)
 
  - Analyze churn distribution and class imbalance
 
@@ -48,7 +48,7 @@ This project follows below workflow:
 
  - Detect trends across demographics, services, and contract types
 
- - [x] 2. Data Preprocessing and Feature Engineering
+ - [ ] 2. Data Preprocessing and Feature Engineering
 
  - Handle missing values and outliers
 
