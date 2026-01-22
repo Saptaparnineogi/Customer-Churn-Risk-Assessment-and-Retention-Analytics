@@ -48,7 +48,7 @@ This project follows below workflow:
 
  - Detect trends across demographics, services, and contract types
 
- #### 2. Data Preprocessing and Feature Engineering
+ [x] 2. Data Preprocessing and Feature Engineering
 
  - Handle missing values and outliers
 
