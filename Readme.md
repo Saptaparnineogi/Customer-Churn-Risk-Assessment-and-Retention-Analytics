@@ -40,7 +40,7 @@ This multidimensional view enables the model to learn complex relationships betw
 
 This project follows below workflow:
 
-#### - [x] Exploratory Data Analysis (EDA)
+- [x] Exploratory Data Analysis (EDA)
 
  - Analyze churn distribution and class imbalance
 
