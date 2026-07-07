@@ -37,6 +37,17 @@ Business Recommendations
 ## Pipeline Diagram
 
 ## EDA
+
+## 🔍 Key Insights from Exploratory Data Analysis
+
+| Observation | Business Impact |
+|--------------|-----------------|
+| Month-to-month customers have the highest churn rates | Contract type is the strongest retention indicator. |
+| Customers with short tenure are significantly more likely to churn | Early customer engagement is critical. |
+| Customers without Tech Support or Online Security churn considerably more | Value-added services improve customer retention. |
+| Higher monthly charges are associated with increased churn | Pricing strategy influences customer behaviour. |
+| Customers with dependents show lower churn rates | Household characteristics are associated with customer loyalty. |
+
 ## Feature Engineering
 ## Model Development
 ## Model Evaluation
