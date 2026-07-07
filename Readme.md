@@ -1,4 +1,5 @@
-# Customer Churn Prediction in the Telecom Industry
+# Customer Churn Risk Prediction & Retention Analytics
+An end-to-end machine learning project to predict telecom customer churn, optimize decision thresholds, and translate churn probabilities into retention actions.
 
 ## Problem Definition
 
