@@ -24,54 +24,53 @@ This project develops an end-to-end machine learning pipeline to predict custome
 
 The objective is not only to predict churn accurately but also to demonstrate how machine learning can support customer retention strategies in a real business environment.
 
-## Business Problem
-Customer acquisition is significantly more expensive than customer retention. Identifying customers who are likely to leave enables businesses to proactively target retention campaigns, reduce revenue loss, and improve customer lifetime value.
+## Key Features
 
-This project develops a churn prediction pipeline that estimates each customer's probability of churn and demonstrates how these predictions can support data-driven retention strategies.
+- Exploratory Data Analysis (EDA)
+- Business-driven Feature Engineering
+- Multiple ML Algorithms
+  - Logistic Regression
+  - Random Forest
+  - XGBoost
+  - CatBoost
+- Model Benchmarking
+- Threshold Optimisation
+- Customer Risk Segmentation
+- Business Impact Simulation
+- SHAP Explainability
 
-## Project Objectives
-
-- Explore and understand customer behaviour
-- Identify the main drivers of churn
-- Compare multiple machine learning models
-- Handle class imbalance appropriately
-- Optimize the decision threshold for business use
-- Provide interpretable insights for customer retention
-  
-## Pipeline
-
-Customer Data
-      │
-     EDA
-      │
+ Raw Data
+    │
+    ▼
+EDA
+    │
+    ▼
 Feature Engineering
-      │
-Model Development
-      │
-Model Comparison
-      │
-Threshold Optimization
-      │
-Business Recommendations
+    │
+    ▼
+Preprocessing Pipeline
+    │
+    ▼
+Model Training
+    │
+    ▼
+Model Evaluation
+    │
+    ▼
+Threshold Optimisation
+    │
+    ▼
+Risk Segmentation
+    │
+    ▼
+Business Impact
+    │
+    ▼
+SHAP Explainability
 
-
-## Pipeline Diagram
-
-## EDA
-
-## 🔍 Key Insights from Exploratory Data Analysis
-
-| Observation | Business Impact |
-|--------------|-----------------|
-| Month-to-month customers have the highest churn rates | Contract type is the strongest retention indicator. |
-| Customers with short tenure are significantly more likely to churn | Early customer engagement is critical. |
-| Customers without Tech Support or Online Security churn considerably more | Value-added services improve customer retention. |
-| Higher monthly charges are associated with increased churn | Pricing strategy influences customer behaviour. |
-| Customers with dependents show lower churn rates | Household characteristics are associated with customer loyalty. |
-
-## Feature Engineering
-## Model Development
-## Model Evaluation
-## Threshold Optimization
-## Business Recommendations
-## Future Improvements
+| Model               |  Accuracy | Precision |    Recall |        F1 |   ROC-AUC |
+| ------------------- | --------: | --------: | --------: | --------: | --------: |
+| Logistic Regression |     0.733 |     0.498 | **0.791** |     0.612 |     0.842 |
+| Random Forest ⭐     |     0.762 |     0.535 |     0.781 | **0.635** | **0.845** |
+| XGBoost             |     0.798 |     0.644 |     0.537 |     0.586 |     0.843 |
+| CatBoost            | **0.805** | **0.664** |     0.535 |     0.593 |     0.844 |
