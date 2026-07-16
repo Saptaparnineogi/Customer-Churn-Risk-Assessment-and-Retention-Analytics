@@ -1,7 +1,28 @@
 # Customer Churn Risk Prediction & Retention Analytics
+An end-to-end machine learning project that predicts customer churn and demonstrates how predictive analytics can support business-driven retention strategies.
+
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange)
+![XGBoost](https://img.shields.io/badge/XGBoost-Boosting-green)
+![CatBoost](https://img.shields.io/badge/CatBoost-Gradient%20Boosting-blue)
+![Random Forest](https://img.shields.io/badge/Random%20Forest-Ensemble-darkgreen)
+![SHAP](https://img.shields.io/badge/Explainability-SHAP-red)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ## Project Overview
-An end-to-end machine learning project to predict telecom customer churn, optimize decision thresholds, and translate churn probabilities into retention actions.
+
+Customer churn is one of the most important challenges faced by subscription-based businesses. Acquiring new customers is significantly more expensive than retaining existing ones, making early identification of customers at risk of leaving a valuable business capability.
+
+This project develops an end-to-end machine learning pipeline to predict customer churn using the IBM Telco Customer Churn dataset. Beyond predictive modelling, the project focuses on business interpretation by incorporating:
+
+- Business-driven feature engineering
+- Model benchmarking
+- Threshold optimisation
+- Customer risk segmentation
+- Business impact simulation
+- SHAP explainability
+
+The objective is not only to predict churn accurately but also to demonstrate how machine learning can support customer retention strategies in a real business environment.
 
 ## Business Problem
 Customer acquisition is significantly more expensive than customer retention. Identifying customers who are likely to leave enables businesses to proactively target retention campaigns, reduce revenue loss, and improve customer lifetime value.
