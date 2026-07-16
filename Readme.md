@@ -99,6 +99,10 @@ Contract type, customer tenure, pricing, internet service, and access to support
 The model successfully separates customers into meaningful risk groups. Observed churn rises from **5.7%** in the Low-Risk segment to **74.2%** in the Very-High-Risk segment, enabling retention teams to prioritise resources according to customer risk.
 ### Explainable AI with SHAP
 
+![SHAP summary](figures/shap_summary.png)
+
+Global SHAP explanations show both the magnitude and direction of the features influencing churn predictions.
+
 ## Business Insights
 
 The analysis identified several customer characteristics associated with increased churn risk.
