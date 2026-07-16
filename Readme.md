@@ -76,7 +76,15 @@ SHAP Explainability
 | CatBoost            | **0.805** | **0.664** |     0.535 |     0.593 |     0.844 |
 
 
-## Visuals
+## 📈 Key Results & Visualizations
+
+### Customer Churn by Contract Type
+
+![Churn by Contract](figures/churn_by_contract.png)
+### Model Benchmarking
+### Most Influential Features
+### Customer Risk Segmentation
+### Explainable AI with SHAP
 
 ## Business Insights
 
