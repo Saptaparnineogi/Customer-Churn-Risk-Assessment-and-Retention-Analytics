@@ -74,3 +74,18 @@ SHAP Explainability
 | Random Forest ⭐     |     0.762 |     0.535 |     0.781 | **0.635** | **0.845** |
 | XGBoost             |     0.798 |     0.644 |     0.537 |     0.586 |     0.843 |
 | CatBoost            | **0.805** | **0.664** |     0.535 |     0.593 |     0.844 |
+
+
+## Visuals
+
+## Business Insights
+
+The analysis identified several customer characteristics associated with increased churn risk.
+
+Key findings include:
+
+- Month-to-month contracts are the strongest predictor of churn.
+- Customers within their first year show substantially higher churn rates.
+- Lack of Online Security and Tech Support increases churn risk.
+- Fiber optic customers demonstrate higher churn than DSL customers.
+- Probability-based customer segmentation enables targeted retention strategies rather than broad campaigns.
