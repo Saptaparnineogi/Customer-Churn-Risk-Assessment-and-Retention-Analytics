@@ -83,9 +83,11 @@ SHAP Explainability
 ![Churn by Contract](figures/churn_by_contract.png)
 
 ### Model Benchmarking
-
+![Churn by Contract](figures/model_comparison.png)
 ### Most Influential Features
+![Churn by Contract](figures/feature_importance.png)
 ### Customer Risk Segmentation
+![Churn by Contract](figures/risk_segmentation.png)
 ### Explainable AI with SHAP
 
 ## Business Insights
