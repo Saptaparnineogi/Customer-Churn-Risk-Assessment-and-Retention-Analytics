@@ -9,7 +9,6 @@ import numpy as np
 from pathlib import Path
 from src.config import FIGURE_DIR
 
-
 from sklearn.metrics import (
     ConfusionMatrixDisplay,
     PrecisionRecallDisplay,
@@ -34,54 +33,6 @@ def plot_confusion_matrix(
     )
 
     ax.set_title(f"{model_name} Confusion Matrix")
-
-    plt.tight_layout()
-
-    return fig
-
-
-def plot_roc_curve(
-    model,
-    X_test,
-    y_test,
-    model_name: str,
-):
-    """Plot ROC curve."""
-
-    fig, ax = plt.subplots(figsize=(6, 5))
-
-    RocCurveDisplay.from_estimator(
-        model,
-        X_test,
-        y_test,
-        ax=ax,
-    )
-
-    ax.set_title(f"{model_name} ROC Curve")
-
-    plt.tight_layout()
-
-    return fig
-
-
-def plot_precision_recall_curve(
-    model,
-    X_test,
-    y_test,
-    model_name: str,
-):
-    """Plot Precision-Recall curve."""
-
-    fig, ax = plt.subplots(figsize=(6, 5))
-
-    PrecisionRecallDisplay.from_estimator(
-        model,
-        X_test,
-        y_test,
-        ax=ax,
-    )
-
-    ax.set_title(f"{model_name} Precision-Recall Curve")
 
     plt.tight_layout()
 
@@ -130,3 +81,42 @@ def save_figure(fig, filename):
         dpi=300,
         bbox_inches="tight",
     )
+
+def plot_roc_curve(
+    y_true,
+    y_prob,
+    model_name: str,
+):
+    fig, ax = plt.subplots(figsize=(6, 5))
+
+    RocCurveDisplay.from_predictions(
+        y_true,
+        y_prob,
+        name=model_name,
+        ax=ax,
+    )
+
+    ax.set_title(f"{model_name} ROC Curve")
+    plt.tight_layout()
+
+    return fig
+
+
+def plot_precision_recall_curve(
+    y_true,
+    y_prob,
+    model_name: str,
+):
+    fig, ax = plt.subplots(figsize=(6, 5))
+
+    PrecisionRecallDisplay.from_predictions(
+        y_true,
+        y_prob,
+        name=model_name,
+        ax=ax,
+    )
+
+    ax.set_title(f"{model_name} Precision-Recall Curve")
+    plt.tight_layout()
+
+    return fig
