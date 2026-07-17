@@ -103,7 +103,7 @@ The model successfully separates customers into meaningful risk groups. Observed
 ![SHAP summary](figures/shap_summary.png)
 
 Global SHAP explanations show both the magnitude and direction of the features influencing churn predictions.
-
+SHAP analysis confirms that month-to-month contracts, short tenure, fibre-optic internet, higher monthly charges, and the absence of online security or technical support increase predicted churn risk. Long-term contracts and longer customer relationships generally reduce it.
 ## Business Insights
 
 The analysis identified several customer characteristics associated with increased churn risk.
