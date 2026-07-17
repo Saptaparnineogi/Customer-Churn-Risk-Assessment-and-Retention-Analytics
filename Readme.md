@@ -7,7 +7,6 @@ An end-to-end machine learning project that predicts customer churn and demonstr
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 
-## Project Pipeline
 ![Churn by Contract](figures/workflow.png)
 
 
@@ -83,32 +82,31 @@ The objective is not only to predict churn accurately but also to demonstrate ho
 
 ## 📈 Key Results & Visualizations
 
-### Key Exploratory Finding
+### 1. Key Exploratory Finding
 
 ![Churn by Contract](figures/churn_by_contract.png)
 
 Month-to-month customers exhibit substantially higher churn than customers on one-year or two-year contracts, establishing contract commitment as one of the clearest retention indicators.
 
-### Model Benchmarking
+### 2. Model Benchmarking
 ![Churn by Contract](figures/model_comparison.png)
 
 Random Forest was selected because it maintained high recall while achieving the highest F1-score, providing the best balance between detecting churners and limiting unnecessary retention interventions.
 
-### What Drives Customer Churn?
+### 3. What Drives Customer Churn?
 ![Churn by Contract](figures/feature_importance.png)
 Contract type, customer tenure, pricing, internet service, and access to support services emerged as the strongest predictors. Month-to-month customers and customers early in their lifecycle represent particularly important retention segments.
 
-### Probability-Based Customer Risk Segmentation
+### 4. Probability-Based Customer Risk Segmentation
 ![Churn by Contract](figures/risk_segmentation.png)
 
 The model successfully separates customers into meaningful risk groups. Observed churn rises from **5.7%** in the Low-Risk segment to **74.2%** in the Very-High-Risk segment, enabling retention teams to prioritise resources according to customer risk.
 
-### Explainable AI with SHAP
+### 5. Explainable AI with SHAP
 
 ![SHAP summary](figures/shap_summary.png)
 
-Global SHAP explanations show both the magnitude and direction of the features influencing churn predictions.
-SHAP analysis confirms that month-to-month contracts, short tenure, fibre-optic internet, higher monthly charges, and the absence of online security or technical support increase predicted churn risk. Long-term contracts and longer customer relationships generally reduce it.
+
 
 ## Business Insights
 
@@ -192,8 +190,8 @@ These figures are illustrative and should not be interpreted as an estimate of a
 Clone the repository:
 
 ```bash
-git clone https://github.com/Saptaparnineogi/Customer-Churn-Prediction.git
-cd Customer-Churn-Prediction
+git clone https://github.com/Saptaparnineogi/Customer-Churn-Risk-Assessment-and-Retention-Analytics.git
+cd Customer-Churn-Risk-Assessment-and-Retention-Analytics
 ````
 ````
 conda create -n churn-prediction python=3.11
