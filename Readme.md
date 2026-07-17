@@ -6,6 +6,11 @@ An end-to-end machine learning project that predicts customer churn and demonstr
 ![SHAP](https://img.shields.io/badge/Explainability-SHAP-red)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
+
+## Project Pipeline
+![Churn by Contract](figures/workflow.png)
+
+
 ## Executive Summary
 
 This project develops an end-to-end machine learning pipeline to predict customer churn and transform predictions into actionable business decisions.
@@ -34,7 +39,6 @@ This project develops an end-to-end machine learning pipeline to predict custome
 - SHAP explainability
 
 The objective is not only to predict churn accurately but also to demonstrate how machine learning can support customer retention strategies in a real business environment.
-
 
 ## Project Components
 
@@ -66,9 +70,7 @@ The objective is not only to predict churn accurately but also to demonstrate ho
 ![Joblib](https://img.shields.io/badge/Joblib-Model%20Persistence-green)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
 
-## Project Pipeline
-
-### Model Performance
+## Model Performance
 
 | Model               |  Accuracy | Precision |    Recall |        F1 |   ROC-AUC |
 | ------------------- | --------: | --------: | --------: | --------: | --------: |
