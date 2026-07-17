@@ -1,6 +1,4 @@
-"""
-Model evaluation utilities.
-"""
+"""Model evaluation utilities for churn prediction."""
 
 from __future__ import annotations
 
@@ -18,122 +16,136 @@ from sklearn.metrics import (
 )
 
 
-def get_predictions(model, X):
+def get_predictions(
+    model: Any,
+    X: Any,
+) -> tuple[Any, Any]:
     """
-    Generate predictions and prediction probabilities.
+    Generate class predictions and positive-class probabilities.
     """
-
     y_pred = model.predict(X)
+
+    if not hasattr(model, "predict_proba"):
+        raise AttributeError(
+            f"{type(model).__name__} does not support predict_proba()."
+        )
+
     y_prob = model.predict_proba(X)[:, 1]
 
     return y_pred, y_prob
 
 
 def calculate_metrics(
-    y_true,
-    y_pred,
-    y_prob,
-):
+    y_true: Any,
+    y_pred: Any,
+    y_prob: Any,
+) -> dict[str, float]:
     """
-    Calculate evaluation metrics.
+    Calculate binary classification metrics.
     """
-
-    metrics = {
+    return {
         "Accuracy": accuracy_score(y_true, y_pred),
-        "Precision": precision_score(y_true, y_pred),
-        "Recall": recall_score(y_true, y_pred),
-        "F1 Score": f1_score(y_true, y_pred),
+        "Precision": precision_score(
+            y_true,
+            y_pred,
+            zero_division=0,
+        ),
+        "Recall": recall_score(
+            y_true,
+            y_pred,
+            zero_division=0,
+        ),
+        "F1 Score": f1_score(
+            y_true,
+            y_pred,
+            zero_division=0,
+        ),
         "ROC-AUC": roc_auc_score(y_true, y_prob),
         "PR-AUC": average_precision_score(y_true, y_prob),
     }
 
-    return metrics
-
 
 def evaluate_model(
-    model,
-    X_test,
-    y_test,
-):
+    model: Any,
+    X_test: Any,
+    y_test: Any,
+) -> dict[str, Any]:
     """
-    Evaluate a single trained model.
+    Evaluate one fitted classification model.
+
+    Returns metrics, predictions, probabilities and confusion matrix.
     """
-
-    y_pred, y_prob = get_predictions(model, X_test)
-
-    metrics = calculate_metrics(
-        y_test,
-        y_pred,
-        y_prob,
+    y_pred, y_prob = get_predictions(
+        model=model,
+        X=X_test,
     )
 
-    metrics["Confusion Matrix"] = confusion_matrix(
-        y_test,
-        y_pred,
+    metrics = calculate_metrics(
+        y_true=y_test,
+        y_pred=y_pred,
+        y_prob=y_prob,
     )
 
     return {
-    "metrics": metrics,
-    "y_pred": y_pred,
-    "y_prob": y_prob,
-    "confusion_matrix": confusion_matrix(...)}
+        "metrics": metrics,
+        "y_pred": y_pred,
+        "y_prob": y_prob,
+        "confusion_matrix": confusion_matrix(
+            y_test,
+            y_pred,
+        ),
+    }
 
 
 def evaluate_models(
-    trained_models,
-    X_test,
-    y_test,
-):
+    trained_models: dict[str, Any],
+    X_test: Any,
+    y_test: Any,
+) -> dict[str, dict[str, Any]]:
     """
-    Evaluate all trained models.
+    Evaluate multiple fitted models.
     """
-
     results = {}
 
     for model_name, model in trained_models.items():
-
         results[model_name] = evaluate_model(
-            model,
-            X_test,
-            y_test,
+            model=model,
+            X_test=X_test,
+            y_test=y_test,
         )
 
     return results
 
 
-def results_to_dataframe(results):
+def results_to_dataframe(
+    results: dict[str, dict[str, Any]],
+) -> pd.DataFrame:
     """
-    Convert evaluation dictionary into a DataFrame.
+    Convert model metrics into a comparison DataFrame.
     """
-
     rows = []
 
-    for model_name, metrics in results.items():
-
-        row = {
-            "Model": model_name,
-            **{
-                k: v
-                for k, v in metrics.items()
-                if k != "Confusion Matrix"
-            },
-        }
-
-        rows.append(row)
+    for model_name, result in results.items():
+        rows.append(
+            {
+                "Model": model_name,
+                **result["metrics"],
+            }
+        )
 
     return (
         pd.DataFrame(rows)
         .sort_values(
-            by="ROC-AUC",
+            by="PR-AUC",
             ascending=False,
         )
         .reset_index(drop=True)
     )
 
 
-def print_results(results_df):
+def print_results(results_df: pd.DataFrame) -> None:
     """
-    Pretty print evaluation results.
+    Print the model comparison table.
     """
-
-    print(results_df.round(4))
+    print("\nModel evaluation results:")
+    print(results_df.round(4).to_string(index=False))
