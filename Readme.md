@@ -191,8 +191,8 @@ These figures are illustrative and should not be interpreted as an estimate of a
 Clone the repository:
 
 ```bash
-git clone https://github.com/Saptaparnineogi/Customer-Churn-Prediction.git
-cd Customer-Churn-Prediction
+git clone https://github.com/Saptaparnineogi/Customer-Churn-Risk-Assessment-and-Retention-Analytics.git
+cd Customer-Churn-Risk-Assessment-and-Retention-Analytics
 ````
 ````
 conda create -n churn-prediction python=3.11
