@@ -7,7 +7,6 @@ An end-to-end machine learning project that predicts customer churn and demonstr
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 
-## Project Pipeline
 ![Churn by Contract](figures/workflow.png)
 
 
