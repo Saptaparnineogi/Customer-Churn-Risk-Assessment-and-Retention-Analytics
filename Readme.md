@@ -148,6 +148,8 @@ Customer-Churn-Prediction/
 ├── README.md
 └── requirements.txt
 
+```
+
 ## Notebook Guide
 
 | Notebook | Purpose |
@@ -194,22 +196,15 @@ conda activate churn-prediction
 pip install -r requirements.txt
 
 
-
----
+```
 
 ### How to Run
-
-```markdown
-## How to Run
 
 Launch Jupyter Notebook:
 
 ```bash
 jupyter notebook
-
-
-
----
+```
 
 ## Limitations
 
