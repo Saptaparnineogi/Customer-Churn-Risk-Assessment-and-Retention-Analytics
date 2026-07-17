@@ -2,12 +2,36 @@
 An end-to-end machine learning project that predicts customer churn and demonstrates how predictive analytics can support business-driven retention strategies.
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange)
-![XGBoost](https://img.shields.io/badge/XGBoost-Boosting-green)
-![CatBoost](https://img.shields.io/badge/CatBoost-Gradient%20Boosting-blue)
-![Random Forest](https://img.shields.io/badge/Random%20Forest-Ensemble-darkgreen)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-End--to--End-blue)
 ![SHAP](https://img.shields.io/badge/Explainability-SHAP-red)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
+## Executive Summary
+
+This project develops an end-to-end machine learning pipeline to predict customer churn and transform predictions into actionable business decisions.
+
+Highlights include:
+
+- Built and benchmarked four machine learning models
+- Selected Random Forest based on business-oriented evaluation
+- Created probability-based customer risk segmentation
+- Simulated business impact for retention campaigns
+- Applied SHAP explainability to interpret model predictions
+
+The project demonstrates the complete lifecycle of a production-oriented data science solution, from exploratory analysis to business decision support.
+
+## Table of Contents
+
+- Project Overview
+- Key Features
+- Pipeline
+- Model Performance
+- Project Highlights
+- Business Insights
+- Repository Structure
+- Dataset
+- Installation
+- Future Improvements
 
 ## Project Overview
 
@@ -24,7 +48,8 @@ This project develops an end-to-end machine learning pipeline to predict custome
 
 The objective is not only to predict churn accurately but also to demonstrate how machine learning can support customer retention strategies in a real business environment.
 
-## Key Features
+
+## Project Components
 
 - Exploratory Data Analysis (EDA)
 - Business-driven Feature Engineering
@@ -39,42 +64,33 @@ The objective is not only to predict churn accurately but also to demonstrate ho
 - Business Impact Simulation
 - SHAP Explainability
 
- Raw Data
-    │
-    ▼
-EDA
-    │
-    ▼
-Feature Engineering
-    │
-    ▼
-Preprocessing Pipeline
-    │
-    ▼
-Model Training
-    │
-    ▼
-Model Evaluation
-    │
-    ▼
-Threshold Optimisation
-    │
-    ▼
-Risk Segmentation
-    │
-    ▼
-Business Impact
-    │
-    ▼
-SHAP Explainability
+## Technologies
+
+**Languages & Libraries**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-017CEE?style=flat)
+![CatBoost](https://img.shields.io/badge/CatBoost-FFCC00?style=flat)
+![SHAP](https://img.shields.io/badge/SHAP-Explainability-red)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat&logo=plotly&logoColor=white)
+![Joblib](https://img.shields.io/badge/Joblib-Model%20Persistence-green)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
+
+## Project Pipeline
+
+### Model Performance
 
 | Model               |  Accuracy | Precision |    Recall |        F1 |   ROC-AUC |
 | ------------------- | --------: | --------: | --------: | --------: | --------: |
 | Logistic Regression |     0.733 |     0.498 | **0.791** |     0.612 |     0.842 |
-| Random Forest ⭐     |     0.762 |     0.535 |     0.781 | **0.635** | **0.845** |
+| Random Forest       |     0.762 |     0.535 |     0.781 | **0.635** | **0.845** |
 | XGBoost             |     0.798 |     0.644 |     0.537 |     0.586 |     0.843 |
 | CatBoost            | **0.805** | **0.664** |     0.535 |     0.593 |     0.844 |
 
+>**Selected model: Random Forest, chosen because it achieved the strongest balance between precision, recall and F1-score for customer retention.**
 
 ## 📈 Key Results & Visualizations
 
@@ -104,17 +120,15 @@ The model successfully separates customers into meaningful risk groups. Observed
 
 Global SHAP explanations show both the magnitude and direction of the features influencing churn predictions.
 SHAP analysis confirms that month-to-month contracts, short tenure, fibre-optic internet, higher monthly charges, and the absence of online security or technical support increase predicted churn risk. Long-term contracts and longer customer relationships generally reduce it.
+
 ## Business Insights
 
-The analysis identified several customer characteristics associated with increased churn risk.
+The analysis demonstrates how churn predictions can support customer retention strategies by enabling:
 
-Key findings include:
-
-- Month-to-month contracts are the strongest predictor of churn.
-- Customers within their first year show substantially higher churn rates.
-- Lack of Online Security and Tech Support increases churn risk.
-- Fiber optic customers demonstrate higher churn than DSL customers.
-- Probability-based customer segmentation enables targeted retention strategies rather than broad campaigns.
+- Early identification of high-risk customers
+- Prioritised allocation of retention resources
+- Explainable prediction using SHAP
+- Data-driven retention decision making
 
 ## Repository Structure
 
@@ -149,6 +163,7 @@ Customer-Churn-Prediction/
 └── requirements.txt
 
 ```
+> The repository is organised to separate exploratory analysis, model development, trained models and supporting visualisations, making the workflow easy to follow and reproduce.
 
 ## Notebook Guide
 
@@ -171,7 +186,7 @@ The modelling target is:
 - Target churn rate: approximately 26.5%
 
 
-## Illustrative Business Impact
+## Business Impact
 
 The business-impact simulation demonstrates how churn probabilities could support retention-budget allocation.
 
@@ -190,13 +205,14 @@ Clone the repository:
 ```bash
 git clone https://github.com/Saptaparnineogi/Customer-Churn-Prediction.git
 cd Customer-Churn-Prediction
-
+````
+````
 conda create -n churn-prediction python=3.11
 conda activate churn-prediction
+````
+````
 pip install -r requirements.txt
-
-
-```
+````
 
 ### How to Run
 
@@ -204,6 +220,7 @@ Launch Jupyter Notebook:
 
 ```bash
 jupyter notebook
+
 ```
 
 ## Limitations
@@ -223,3 +240,10 @@ jupyter notebook
 - Hyperparameter tuning with Optuna
 - Model monitoring and drift detection
 - Deployment through a Streamlit application or REST API
+
+
+## Conclusion
+
+This project demonstrates an end-to-end machine learning workflow that extends beyond predictive modelling to business decision support.
+
+By combining robust feature engineering, model benchmarking, explainable AI, and business-oriented evaluation, it illustrates how churn prediction can be translated into actionable customer retention strategies.
