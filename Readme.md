@@ -115,3 +115,116 @@ Key findings include:
 - Lack of Online Security and Tech Support increases churn risk.
 - Fiber optic customers demonstrate higher churn than DSL customers.
 - Probability-based customer segmentation enables targeted retention strategies rather than broad campaigns.
+
+## Repository Structure
+
+```text
+Customer-Churn-Prediction/
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── figures/
+│   ├── churn_by_contract.png
+│   ├── model_comparison.png
+│   ├── feature_importance.png
+│   ├── risk_segmentation.png
+│   └── shap_summary.png
+│
+├── models/
+│   ├── logistic_regression_pipeline.pkl
+│   ├── random_forest_pipeline.pkl
+│   ├── xgboost_pipeline.pkl
+│   └── catboost_pipeline.pkl
+│
+├── notebooks/
+│   ├── 01_Exploratory_Data_Analysis.ipynb
+│   ├── 02_Feature_Engineering_and_Model_Development.ipynb
+│   └── 03_Model_Evaluation_and_Business_Insights.ipynb
+│
+├── src/
+│
+├── README.md
+└── requirements.txt
+
+## Notebook Guide
+
+| Notebook | Purpose |
+|----------|---------|
+| `01_Exploratory_Data_Analysis.ipynb` | Explores churn patterns across customer demographics, contracts, services, tenure and billing behaviour |
+| `02_Feature_Engineering_and_Model_Development.ipynb` | Builds business-driven features, preprocessing pipelines and benchmarks multiple classification models |
+| `03_Model_Evaluation_and_Business_Insights.ipynb` | Optimises the decision threshold, segments customers by risk, simulates business impact and explains predictions using SHAP |
+
+## Dataset
+
+The project uses the IBM Telco Customer Churn dataset, containing customer demographics, account information, subscribed services, billing characteristics and churn outcomes.
+
+The modelling target is:
+
+- `Churn = 1`: Customer left the provider
+- `Churn = 0`: Customer remained with the provider
+
+- Customers: 7,043
+- Target churn rate: approximately 26.5%
+
+
+## Illustrative Business Impact
+
+The business-impact simulation demonstrates how churn probabilities could support retention-budget allocation.
+
+The simulation uses hypothetical assumptions for:
+
+- Retention campaign cost
+- Annual customer value
+- Retention success rate
+
+These figures are illustrative and should not be interpreted as an estimate of actual financial return.
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Saptaparnineogi/Customer-Churn-Prediction.git
+cd Customer-Churn-Prediction
+
+conda create -n churn-prediction python=3.11
+conda activate churn-prediction
+pip install -r requirements.txt
+
+
+
+---
+
+### How to Run
+
+```markdown
+## How to Run
+
+Launch Jupyter Notebook:
+
+```bash
+jupyter notebook
+
+
+
+---
+
+## Limitations
+
+- The dataset is relatively small and represents a simplified telecom use case.
+- Historical campaign-response data and customer lifetime value were unavailable.
+- The financial-impact simulation uses illustrative assumptions.
+- Feature importance and SHAP values explain model behaviour but do not establish causal relationships.
+- The model has not been validated on an external or more recent customer population.
+
+
+## Future Improvements
+
+- Probability calibration
+- Customer lifetime value modelling
+- Profit-based threshold optimisation
+- Hyperparameter tuning with Optuna
+- Model monitoring and drift detection
+- Deployment through a Streamlit application or REST API
