@@ -20,19 +20,6 @@ Highlights include:
 
 The project demonstrates the complete lifecycle of a production-oriented data science solution, from exploratory analysis to business decision support.
 
-## Table of Contents
-
-- Project Overview
-- Key Features
-- Pipeline
-- Model Performance
-- Project Highlights
-- Business Insights
-- Repository Structure
-- Dataset
-- Installation
-- Future Improvements
-
 ## Project Overview
 
 Customer churn is one of the most important challenges faced by subscription-based businesses. Acquiring new customers is significantly more expensive than retaining existing ones, making early identification of customers at risk of leaving a valuable business capability.
