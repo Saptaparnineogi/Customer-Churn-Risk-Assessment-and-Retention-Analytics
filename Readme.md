@@ -2,7 +2,7 @@
 An end-to-end machine learning project that predicts customer churn and demonstrates how predictive analytics can support business-driven retention strategies.
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-End--to--End-blue)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-End--to--End-blueviolet)
 ![SHAP](https://img.shields.io/badge/Explainability-SHAP-red)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
