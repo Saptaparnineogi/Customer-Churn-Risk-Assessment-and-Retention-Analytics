@@ -72,7 +72,11 @@ def evaluate_model(
         y_pred,
     )
 
-    return metrics
+    return {
+    "metrics": metrics,
+    "y_pred": y_pred,
+    "y_prob": y_prob,
+    "confusion_matrix": confusion_matrix(...)}
 
 
 def evaluate_models(
