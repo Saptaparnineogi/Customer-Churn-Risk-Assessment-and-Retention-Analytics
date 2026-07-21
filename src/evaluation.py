@@ -133,14 +133,7 @@ def results_to_dataframe(
             }
         )
 
-    return (
-        pd.DataFrame(rows)
-        .sort_values(
-            by="PR-AUC",
-            ascending=False,
-        )
-        .reset_index(drop=True)
-    )
+    return pd.DataFrame(rows)
 
 
 def print_results(results_df: pd.DataFrame) -> None:
