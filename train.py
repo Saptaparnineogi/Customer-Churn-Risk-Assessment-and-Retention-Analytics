@@ -21,6 +21,8 @@ from src.evaluation import (
     print_results,
 )
 from src.model_io import save_model
+from src.decision_threshold import find_best_threshold
+
 
 def prepare_target(df):
     """
@@ -71,9 +73,8 @@ def main() -> None:
     # 6. Build preprocessing pipeline
     preprocessor = build_preprocessor(
         numerical_features=numerical_features,
-        categorical_features=categorical_features,
+        categorical_features=categorical_features
     )
-    X_train_transformed = preprocessor.fit_transform(X_train)
 
     X_train_transformed = preprocessor.fit_transform(X_train)
     X_test_transformed = preprocessor.transform(X_test)
@@ -115,6 +116,38 @@ def main() -> None:
     )
 
     print(f"Saved {best_model_name}")
+    best_model_result = results[best_model_name]
+
+    threshold_result = find_best_threshold(
+        y_true=y_test,
+        y_prob=best_model_result["y_prob"],
+        metric="f1",
+    )
+
+    print("\nThreshold optimization results:")
+    print(
+        f"Best threshold: "
+        f"{threshold_result['best_threshold']:.2f}"
+    )
+    print(
+        f"Precision: "
+        f"{threshold_result['precision']:.4f}"
+    )
+    print(
+        f"Recall: "
+        f"{threshold_result['recall']:.4f}"
+    )
+    print(
+        f"F1 score: "
+        f"{threshold_result['f1']:.4f}"
+    )
+    print(
+        "Confusion matrix values: "
+        f"TN={threshold_result['true_negatives']}, "
+        f"FP={threshold_result['false_positives']}, "
+        f"FN={threshold_result['false_negatives']}, "
+        f"TP={threshold_result['true_positives']}"
+    )
 
 
 if __name__ == "__main__":
