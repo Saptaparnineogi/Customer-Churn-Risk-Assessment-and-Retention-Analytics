@@ -6,6 +6,7 @@ from src.config import (
     CUSTOMER_ID_COLUMN,
     DATA_PATH,
     MODEL_DIR,
+    MODEL_SELECTION_METRIC,
     RANDOM_STATE,
     TARGET_COLUMN,
     TEST_SIZE,
@@ -101,6 +102,10 @@ def main() -> None:
 )
 
     results_df = results_to_dataframe(results)
+    results_df = results_df.sort_values(
+    by=MODEL_SELECTION_METRIC,
+    ascending=False,
+    )
     print_results(results_df)
     best_model_name = results_df.iloc[0]["Model"]
 
