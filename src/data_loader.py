@@ -32,7 +32,10 @@ def load_data(data_path: str | Path) -> pd.DataFrame:
         raise FileNotFoundError(f"Dataset not found: {data_path}")
 
     df = pd.read_csv(data_path)
-
+    df["TotalCharges"] = pd.to_numeric(
+    df["TotalCharges"],
+    errors="coerce"
+    )
     if df.empty:
         raise ValueError("The loaded dataset is empty.")
 
