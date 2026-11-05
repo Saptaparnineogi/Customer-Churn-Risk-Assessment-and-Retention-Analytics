@@ -1,4 +1,4 @@
-# Customer Churn Risk Prediction with Model Explanability
+# Customer Churn Risk Prediction with Model Explainability
 An end-to-end machine learning project that predicts customer churn and demonstrates how predictive analytics can support business-driven retention strategies.
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
@@ -23,7 +23,7 @@ Highlights include:
 - Developed a standalone prediction pipeline for new customer data
 - Added unit tests and GitHub Actions CI
 
-The project demonstrates the complete lifecycle of a production-style machine learning solution, from exploratory analysis to automated inference on new customer data., from exploratory analysis to business decision support.
+The project demonstrates the complete lifecycle of a production-style machine learning solution, from exploratory analysis to automated inference on new customer data.
 
 ## Project Overview
 
