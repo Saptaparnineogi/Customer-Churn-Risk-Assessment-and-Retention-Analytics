@@ -181,6 +181,9 @@ Customer-Churn-Prediction/
 └── requirements.txt
 
 ```
+
+> Note: data/ and models/ are excluded via .gitignore. Download the IBM Telco Customer Churn dataset into data/raw/, then run python train.py to generate the processed data and models/best_model.joblib before using predict.py.
+
 > The repository is organised to separate exploratory analysis, model development, trained models and supporting visualisations, making the workflow easy to follow and reproduce.
 
 ## Notebook Guide
