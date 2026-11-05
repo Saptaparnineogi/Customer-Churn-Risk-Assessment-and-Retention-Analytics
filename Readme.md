@@ -209,15 +209,22 @@ The modelling target is:
 
 ## Business Impact
 
-The business-impact simulation demonstrates how churn probabilities could support retention-budget allocation.
+## Business Impact (illustrative)
 
-The simulation uses hypothetical assumptions for:
+To show how churn probabilities support retention decisions, I simulated a campaign that targets only the **High** and **Very High** risk segments.
 
-- Retention campaign cost
-- Annual customer value
-- Retention success rate
+*Assumptions (illustrative, not a financial forecast): €50 retention offer per contacted customer, €600 annual value per customer, 30% of contacted churners retained.*
 
-These figures are illustrative and should not be interpreted as an estimate of actual financial return.
+| Metric | Value |
+|---|---:|
+| Customers contacted | 268 |
+| Actual churners among them | 131 (49%) |
+| Estimated customers retained | 39 |
+| Campaign cost | €13,400 |
+| Estimated revenue protected | €23,400 |
+| **Estimated net value** | **€10,000** |
+
+**Takeaway:** almost half of the customers the model flags are real churners, compared with 26.5% across the whole customer base. That roughly doubles the hit rate of an untargeted campaign, and under these assumptions every €1 spent returns about €1.75 in protected revenue.
 
 ## Installation
 
