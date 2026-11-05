@@ -206,9 +206,6 @@ The modelling target is:
 - Customers: 7,043
 - Target churn rate: approximately 26.5%
 
-
-## Business Impact
-
 ## Business Impact (illustrative)
 
 To show how churn probabilities support retention decisions, I simulated a campaign that targets only the **High** and **Very High** risk segments.
